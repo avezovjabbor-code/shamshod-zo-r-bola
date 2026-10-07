@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nonsense - Learn a new language from movies you love</title>
+  <meta name="description" content="A new story-driven learning experience. Language immersion powered by Hollywood movies.">
+  <link rel="icon" href="olma/assets/engine_4.png" type="image/png">
+  <link rel="stylesheet" href="olma/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP FIXED NAVIGATION
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <!-- Language Selector Pill -->
+    <div class="nav-left">
+      <div class="lang-selector-wrapper">
+        <button class="glass-pill" id="langToggleBtn" aria-label="Change language">
+          <span class="flag-icon">
+            <svg id="currentFlagSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342" width="18" height="12">
+              <path fill="#BD3D44" d="M0 0h513v342H0z"/>
+              <path stroke="#FFF" stroke-width="26" d="M0 26h513M0 78h513M0 130h513M0 182h513M0 234h513M0 286h513M0 338h513"/>
+              <path fill="#192F5D" d="M0 0h205v182H0z"/>
+            </svg>
+          </span>
+          <span id="currentLangLabel">EN</span>
+        </button>
+
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" class="lang-option" data-lang="EN">🇺🇸 English</a>
+          <a href="#" class="lang-option" data-lang="RU">🇷🇺 Русский</a>
+          <a href="#" class="lang-option" data-lang="UZ">🇺🇿 O'zbekcha</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Brand Logo "N" -->
+    <div class="nav-center">
+      <a href="#" class="brand-logo" aria-label="Nonsense Home">
+        <svg width="38" height="45" viewBox="0 0 38 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.417969 4.18811C0.417969 2.74965 0.417969 2.03042 0.697912 1.481C0.944156 0.997722 1.33708 0.604801 1.82036 0.358556C2.36978 0.0786133 3.08901 0.0786133 4.52747 0.0786133H17.4071C18.8455 0.0786133 19.5648 0.0786133 20.1142 0.358556C20.5975 0.604801 20.9904 0.997722 21.2366 1.481C21.5166 2.03042 21.5166 2.74965 21.5166 4.18811V23.8836C21.5166 24.955 22.3851 25.8235 23.4564 25.8235C24.5278 25.8235 25.3963 24.955 25.3963 23.8836V4.18811C25.3963 2.74965 25.3963 2.03042 25.6762 1.481C25.9225 0.997722 26.3154 0.604801 26.7987 0.358556C27.3481 0.0786133 28.0673 0.0786133 29.5058 0.0786133H33.785C35.2235 0.0786133 35.9427 0.0786133 36.4921 0.358556C36.9754 0.604801 37.3683 0.997722 37.6146 1.481C37.8945 2.03042 37.8945 2.74965 37.8945 4.18811V40.7911C37.8945 42.2295 37.8945 42.9488 37.6146 43.4982C37.3683 43.9815 36.9754 44.3744 36.4921 44.6206C35.9427 44.9006 35.2235 44.9006 33.785 44.9006H20.9055C19.467 44.9006 18.7478 44.9006 18.1983 44.6206C17.7151 44.3744 17.3221 43.9815 17.0759 43.4982C16.796 42.9488 16.796 42.2295 16.796 40.7911V21.0956C16.796 20.0242 15.9275 19.1557 14.8561 19.1557C13.7847 19.1557 12.9162 20.0242 12.9162 21.0956V40.7911C12.9162 42.2295 12.9162 42.9488 12.6363 43.4982C12.39 43.9815 11.9971 44.3744 11.5138 44.6206C10.9644 44.9006 10.2452 44.9006 8.80674 44.9006H4.52747C3.08901 44.9006 2.36978 44.9006 1.82036 44.6206C1.33708 44.3744 0.944156 43.9815 0.697912 43.4982C0.417969 42.9488 0.417969 42.2295 0.417969 40.7911V4.18811Z" fill="#ffffff"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Right Hamburger Menu -->
+    <div class="nav-right">
+      <button class="glass-pill menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <div class="menu-lines">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: HERO (Hunger Games - Katniss Everdeen)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg">
+      <img src="olma/assets/hero_hunger_games.webp" alt="Hunger Games Movie Scene" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-subtitle-japanese">ようこそ</div>
+      <h1 class="hero-title" id="heroTitle">Learn a new language from movies you love.</h1>
+      
+      <div class="hero-cta-wrapper">
+        <button class="btn-cta open-app-modal">
+          <span class="cta-btn-text">Get the App</span>
+          <div class="btn-cta-circle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: STORY EXPERIENCE (Kung Fu Panda + Dual Phone Mockups)
+       ========================================================================== -->
+  <section class="experience-section" id="experience">
+    <div class="experience-container">
+      <!-- Left Column Text -->
+      <div class="experience-text">
+        <h2 class="experience-title" id="expTitle">A new story-driven<br>learning experience.</h2>
+        <p class="experience-desc" id="expDesc">Language immersion powered by Hollywood movies.</p>
+      </div>
+
+      <!-- Right Column Mockups -->
+      <div class="experience-mockups">
+        <div class="phone-mockup phone-panda">
+          <img src="olma/assets/phone_kung_fu_panda.png" alt="Kung Fu Panda scene learning" loading="lazy">
+        </div>
+        <div class="phone-mockup phone-context">
+          <img src="olma/assets/phone_ui_explanation.png" alt="Context breakdown and expression explanation" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-cta-wrap">
+      <button class="btn-cta open-app-modal">
+        <span class="cta-btn-text">Get the App</span>
+        <div class="btn-cta-circle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: A DEEPER CONNECTION (Cinematic 5 Movie Cards with Floor Reflections)
+       ========================================================================== -->
+  <section class="connection-section" id="deep-learning">
+    <h2 class="connection-headline" id="connectionHeadline">A deeper connection with what you learn.</h2>
+
+    <div class="connection-reel-wrap">
+      <div class="connection-reel">
+        
+        <!-- Card 1: Katniss / Hunger Games (Left edge) -->
+        <div class="movie-card-item">
+          <div class="movie-card-poster">
+            <img src="olma/assets/movie_scroll_1.png" alt="Movie Scene 1" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Card 2: Poppy / Trolls -->
+        <div class="movie-card-item">
+          <div class="movie-card-poster">
+            <img src="olma/assets/movie_scroll_2.png" alt="Trolls Poppy Scene" loading="lazy">
+          </div>
+          <div class="movie-card-caption">
+            <img src="olma/assets/icon_eye_glow.svg" alt="Eye Icon">
+            <span id="caption1">Stories and characters you already love.</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Kick-Ass (Center Active) -->
+        <div class="movie-card-item active">
+          <div class="movie-card-poster">
+            <img src="olma/assets/hero_kick_ass.webp" alt="Kick-Ass Hero Scene" loading="lazy">
+          </div>
+          <div class="movie-card-caption">
+            <img src="olma/assets/icon_mouth_glow.svg" alt="Mouth Icon">
+            <span id="caption2">Emotional moments that stick with you.</span>
+          </div>
+        </div>
+
+        <!-- Card 4: King Kong -->
+        <div class="movie-card-item">
+          <div class="movie-card-poster">
+            <img src="olma/assets/movie_scroll_3.png" alt="King Kong Scene" loading="lazy">
+          </div>
+          <div class="movie-card-caption">
+            <img src="olma/assets/icon_globe_glow.svg" alt="Globe Icon">
+            <span id="caption3">Context your brain needs to make sense of language</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Sci-Fi Scene (Right edge) -->
+        <div class="movie-card-item">
+          <div class="movie-card-poster">
+            <img src="olma/assets/movie_scroll_4.png" alt="Sci-Fi Action Scene" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: INVISIBLE LEARNING ENGINE (Stacked 3D Glass Cards)
+       ========================================================================== -->
+  <section class="engine-section" id="engine">
+    <div class="engine-ambient-glow">
+      <img src="olma/assets/light_bottom.svg" alt="Ambient Lighting">
+    </div>
+
+    <div class="engine-header">
+      <h2 class="engine-title" id="engineTitle">The invisible learning engine.</h2>
+      <p class="engine-desc" id="engineDesc">Nonsense organizes dialogues in context, offering precise translations and hundreds of examples.</p>
+    </div>
+
+    <!-- 3D Stack of Cards -->
+    <div class="engine-cards-stack">
+      <div class="engine-card engine-card-1" title="Movie Database">
+        <img src="olma/assets/engine_1.png" alt="Movie Database Card">
+      </div>
+      <div class="engine-card engine-card-2" title="Language Processing">
+        <img src="olma/assets/engine_2.png" alt="Language Processing Card">
+      </div>
+      <div class="engine-card engine-card-3" title="Language Mapping">
+        <img src="olma/assets/engine_3.png" alt="Language Mapping Card">
+      </div>
+      <div class="engine-card engine-card-4" title="Nonsense App">
+        <img src="olma/assets/engine_4.png" alt="Nonsense Icon Gradient Card">
+      </div>
+    </div>
+
+    <div class="engine-cta-wrap">
+      <button class="btn-cta open-app-modal">
+        <span class="cta-btn-text">Get the App</span>
+        <div class="btn-cta-circle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: SHOWCASE CONTAINER (#F3F1F1 Light Background)
+       ========================================================================== -->
+  <section class="showcase-section" id="features">
+    <div class="showcase-container">
+      
+      <!-- Top Row: Two White Cards (Highlight & Focus) -->
+      <div class="showcase-grid-top">
+        
+        <!-- Left White Card: Trolls Highlight -->
+        <div class="white-card white-card-highlight">
+          <div class="highlight-mockup-wrap">
+            <img src="olma/assets/highlight.png" alt="Follow the highlighted words as you watch each scene" loading="lazy">
+          </div>
+          <p id="cardHighlightText">Follow the highlighted words as you watch each scene.</p>
+        </div>
+
+        <!-- Right White Card: Focus words & personalize -->
+        <div class="white-card white-card-focus">
+          <div>
+            <h3 id="cardFocusTitle">Choose words you want to focus on and personalize your learning path.</h3>
+            <p id="cardFocusDesc">Save words to your focus list and instantly update your scene feed.</p>
+          </div>
+          <div class="focus-graphic-wrap open-app-modal" title="Click to Focus">
+            <img src="olma/assets/focus.svg" alt="Focus list button and ripple" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Middle: Yellow Contextual Card -->
+      <div class="card-yellow">
+        <div class="card-yellow-mockup">
+          <img src="olma/assets/contextual.png" alt="Contextual Description Mockup" loading="lazy">
+        </div>
+        <div class="card-yellow-content">
+          <h2 id="cardYellowText">Get instant contextual definitions for any word or phrase.</h2>
+        </div>
+      </div>
+
+      <!-- Bottom: Deep Black Premium Card -->
+      <div class="card-premium">
+        <div class="premium-bg-light">
+          <img src="olma/assets/light_bottom.svg" alt="Bottom Light">
+        </div>
+
+        <div class="premium-icon-wrap">
+          <img src="olma/assets/premium.png" alt="Nonsense Premium Badge" loading="lazy">
+        </div>
+
+        <h2 class="premium-title" id="cardPremiumTitle">Premium lets you get more out of Nonsense.</h2>
+
+        <div class="premium-badges-row">
+          <div class="premium-badge">
+            <img src="olma/assets/icon_eye.svg" alt="No Ads">
+            <span id="badgeNoAds">Ad Free</span>
+          </div>
+          <div class="premium-badge">
+            <img src="olma/assets/icon_4k.svg" alt="Ultra HD">
+            <span id="badgeUltraHd">Ultra HD Video & Audio</span>
+          </div>
+          <div class="premium-badge">
+            <img src="olma/assets/icon_search.svg" alt="Search">
+            <span id="badgeSearch">Advanced Search</span>
+          </div>
+          <div class="premium-badge">
+            <img src="olma/assets/icon_lock.svg" alt="Early Access">
+            <span id="badgeAccess">Early Access</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: MOVIE MARQUEE & APP DOWNLOAD
+       ========================================================================== -->
+  <section class="posters-section" id="movies">
+    <h2 class="posters-headline" id="postersHeadline">Learn languages with movies you love</h2>
+    <p class="posters-sub" id="postersSub">Thousands of iconic scenes, dialogues, and expressions from cinema</p>
+
+    <!-- Auto Scrolling Posters Reel -->
+    <div class="posters-marquee">
+      <div class="posters-track">
+        <div class="poster-item"><img src="olma/assets/poster_1.webp" alt="Movie 1"></div>
+        <div class="poster-item"><img src="olma/assets/poster_2.webp" alt="Movie 2"></div>
+        <div class="poster-item"><img src="olma/assets/poster_3.webp" alt="Movie 3"></div>
+        <div class="poster-item"><img src="olma/assets/poster_7.webp" alt="Movie 7"></div>
+        <div class="poster-item"><img src="olma/assets/poster_9.webp" alt="Movie 9"></div>
+        <div class="poster-item"><img src="olma/assets/poster_10.webp" alt="Movie 10"></div>
+        <!-- Duplicated track for infinite seamless marquee -->
+        <div class="poster-item"><img src="olma/assets/poster_1.webp" alt="Movie 1"></div>
+        <div class="poster-item"><img src="olma/assets/poster_2.webp" alt="Movie 2"></div>
+        <div class="poster-item"><img src="olma/assets/poster_3.webp" alt="Movie 3"></div>
+        <div class="poster-item"><img src="olma/assets/poster_7.webp" alt="Movie 7"></div>
+        <div class="poster-item"><img src="olma/assets/poster_9.webp" alt="Movie 9"></div>
+        <div class="poster-item"><img src="olma/assets/poster_10.webp" alt="Movie 10"></div>
+      </div>
+    </div>
+
+    <!-- Official Store Badges -->
+    <div class="store-buttons-wrap">
+      <a href="#" class="store-btn open-app-modal">
+        <img src="olma/assets/appstore.png" alt="Download on the App Store">
+      </a>
+      <a href="#" class="store-btn open-app-modal">
+        <img src="olma/assets/googleplay.png" alt="Get it on Google Play">
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span style="font-weight:800; font-size: 20px; color: #fff;">Nonsense</span>
+          <span style="color: var(--accent-yellow); margin-left: 8px; font-weight: 700;">● Olma</span>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#experience">Experience</a>
+          <a href="#engine">Engine</a>
+          <a href="#features">Features</a>
+          <a href="#">Careers</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 The Nonsense Company, Inc. All rights reserved.</p>
+        <p>Crafted for movie-lovers learning languages naturally.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING ACTION CHAT WIDGET
+       ========================================================================== -->
+  <button class="chat-float-btn" id="chatFloatBtn" aria-label="Chat with Nonsense Support">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"/>
+    </svg>
+  </button>
+
+  <!-- Interactive Chat Popup -->
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">N</div>
+        <div>
+          <div class="chat-header-title">Nonsense Assistant</div>
+          <div class="chat-header-status">Online</div>
+        </div>
+      </div>
+      <button class="chat-close-btn" id="chatCloseBtn">&times;</button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <div class="chat-msg bot" id="initialBotMsg">
+        Hello! 👋 Welcome to Nonsense! How can I help you learn languages through cinema?
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Type a message...">
+      <button class="chat-send-btn" id="chatSendBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: "GET THE APP"
+       ========================================================================== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="app-modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+
+      <div class="modal-logo">
+        <svg width="44" height="52" viewBox="0 0 38 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.417969 4.18811C0.417969 2.74965 0.417969 2.03042 0.697912 1.481C0.944156 0.997722 1.33708 0.604801 1.82036 0.358556C2.36978 0.0786133 3.08901 0.0786133 4.52747 0.0786133H17.4071C18.8455 0.0786133 19.5648 0.0786133 20.1142 0.358556C20.5975 0.604801 20.9904 0.997722 21.2366 1.481C21.5166 2.03042 21.5166 2.74965 21.5166 4.18811V23.8836C21.5166 24.955 22.3851 25.8235 23.4564 25.8235C24.5278 25.8235 25.3963 24.955 25.3963 23.8836V4.18811C25.3963 2.74965 25.3963 2.03042 25.6762 1.481C25.9225 0.997722 26.3154 0.604801 26.7987 0.358556C27.3481 0.0786133 28.0673 0.0786133 29.5058 0.0786133H33.785C35.2235 0.0786133 35.9427 0.0786133 36.4921 0.358556C36.9754 0.604801 37.3683 0.997722 37.6146 1.481C37.8945 2.03042 37.8945 2.74965 37.8945 4.18811V40.7911C37.8945 42.2295 37.8945 42.9488 37.6146 43.4982C37.3683 43.9815 36.9754 44.3744 36.4921 44.6206C35.9427 44.9006 35.2235 44.9006 33.785 44.9006H20.9055C19.467 44.9006 18.7478 44.9006 18.1983 44.6206C17.7151 44.3744 17.3221 43.9815 17.0759 43.4982C16.796 42.9488 16.796 42.2295 16.796 40.7911V21.0956C16.796 20.0242 15.9275 19.1557 14.8561 19.1557C13.7847 19.1557 12.9162 20.0242 12.9162 21.0956V40.7911C12.9162 42.2295 12.9162 42.9488 12.6363 43.4982C12.39 43.9815 11.9971 44.3744 11.5138 44.6206C10.9644 44.9006 10.2452 44.9006 8.80674 44.9006H4.52747C3.08901 44.9006 2.36978 44.9006 1.82036 44.6206C1.33708 44.3744 0.944156 43.9815 0.697912 43.4982C0.417969 42.9488 0.417969 42.2295 0.417969 40.7911V4.18811Z" fill="#FFC702"/>
+        </svg>
+      </div>
+
+      <h3 class="modal-title" id="modalTitle">Download Nonsense</h3>
+      <p class="modal-subtitle" id="modalSub">Scan the QR code with your smartphone camera for instant installation</p>
+
+      <div class="qr-code-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nonsense.com/en&color=000000&bgcolor=FFFFFF" alt="QR Code to Download Nonsense">
+      </div>
+
+      <div class="store-buttons-wrap">
+        <a href="#" class="store-btn">
+          <img src="olma/assets/appstore.png" alt="App Store">
+        </a>
+        <a href="#" class="store-btn">
+          <img src="olma/assets/googleplay.png" alt="Google Play">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE DRAWER MENU
+       ========================================================================== -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="closeDrawerBtn">&times;</button>
+    <a href="#hero" class="drawer-link">Home</a>
+    <a href="#experience" class="drawer-link">Experience</a>
+    <a href="#engine" class="drawer-link">Engine</a>
+    <a href="#features" class="drawer-link">Features</a>
+    <a href="#movies" class="drawer-link">Movies</a>
+    <button class="btn-cta open-app-modal" style="margin-top: 20px; background: #000; color: #FFC702;">
+      <span class="cta-btn-text">Get the App</span>
+      <div class="btn-cta-circle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="olma/script.js"></script>
+</body>
+</html>
